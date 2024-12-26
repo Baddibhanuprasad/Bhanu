@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Bhanu Prasad</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 10px 0;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    ul li {
+      margin: 5px 0;
+    }
+
+    .content {
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home" onclick="showSection('home')">Home</a></li>
+        <li><a href="#skills" onclick="showSection('contact')">Contact</a></li>
+        <li><a href="#resume" onclick="showSection('resume')">Resume</a></li>
+        <li><a href="#contact" onclick="showSection('skills')">Skills</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="content active">
+    <h1>Welcome to My Portfolio</h1>
+    <p>Hi, I'm Bhanu Prasad. I'm a passionate Data Analyst and Web Developer.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="content">
+    <h1>Contact Me</h1>
+    <p>Feel free to reach out to me via email or phone.</p>
+    <p>Email: bhanu@example.com</p>
+    <p>Phone: 8374015995</p>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume" class="content">
+    <h1>My Resume</h1>
+    <p>Here is a summary of my education and work experience:</p>
+    <h2>Education</h2>
+    <ul>
+      <li>B.Tech in Cyber security, Vishaka Engineering College</li>
+    </ul>
+    <h2>Experience</h2>
+    <ul>
+      <li>Web Developer Intern, infosys Solutions</li>
+      <li>Data Analyst Intern, google Analytics</li>
+    </ul>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="content">
+    <h1>My Skills</h1>
+    <ul>
+      <li>Data Analysis: Python, Pandas, Excel</li>
+      <li>Stock Market Analysis: Technical Analysis, Trading Strategies</li>
+      <li>Web Development: HTML, CSS, JavaScript, React, Node.js</li>
+      <li>Version Control: Git, GitHub</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Bhanu Prasad. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Function to show the selected section
+    function showSection(sectionId) {
+      // Hide all sections
+      const sections = document.querySelectorAll('.content');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+      
+      // Show the selected section
+      const selectedSection = document.getElementById(sectionId);
+      selectedSection.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
